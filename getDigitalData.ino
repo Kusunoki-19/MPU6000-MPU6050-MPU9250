@@ -59,7 +59,6 @@ void loop() {
     Serial.print("\t Z_rot:");
     Serial.print(atan((float)RealData[3]/RealData[1])*180/PI);
     
-    /*
     Serial.print(RealData[0]);
     Serial.print("\t ACC_Y:");
     Serial.print(RealData[1]);
@@ -71,7 +70,7 @@ void loop() {
     Serial.print(RealData[5]);
     Serial.print("\tGYRO_Z:");
     Serial.println(RealData[6]);
-    */
+    
     Serial.print("\n");
     delay(100);
     
