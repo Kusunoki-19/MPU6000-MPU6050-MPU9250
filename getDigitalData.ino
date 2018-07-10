@@ -45,33 +45,23 @@ void loop() {
     RealData[4] = (int16_t)(Data[8]<<8 | Data[9]);
     RealData[5] = (int16_t)(Data[10]<<8 | Data[11]);
     RealData[6] = (int16_t)(Data[12]<<8 | Data[13]);
-    Serial.print(" ACC_X:");
+    Serial.print(" ACC_X:"); //X加速度
     Serial.print(RealData[0]);
-    Serial.print("\t ACC_Y:");
+    
+    Serial.print("\t ACC_Y:"); //Y加速度
     Serial.print(RealData[1]);
-    Serial.print("\t ACC_Z:");
+    
+    Serial.print("\t ACC_Z:"); //Z加速度
     Serial.print(RealData[2]);
     
-    Serial.print("\t X_rot:");
-    Serial.print(atan((float)RealData[1]/RealData[2])*180/PI);
-    Serial.print("\t Y_rot:");
-    Serial.print(atan((float)RealData[2]/RealData[3])*180/PI);
-    Serial.print("\t Z_rot:");
-    Serial.print(atan((float)RealData[3]/RealData[1])*180/PI);
-    
-    Serial.print(RealData[0]);
-    Serial.print("\t ACC_Y:");
-    Serial.print(RealData[1]);
-    Serial.print("\t ACC_Z:");
-    Serial.print(RealData[2]);
-    Serial.print("\tGYRO_X:");
+    Serial.print("\tGYRO_X:"); //X軸角速度
     Serial.print(RealData[4]);
-    Serial.print("\tGYRO_Y:");
-    Serial.print(RealData[5]);
-    Serial.print("\tGYRO_Z:");
-    Serial.println(RealData[6]);
     
-    Serial.print("\n");
+    Serial.print("\tGYRO_Y:"); //Y軸角速度
+    Serial.print(RealData[5]);
+    
+    Serial.print("\tGYRO_Z:"); //Z軸角速度
+    Serial.println(RealData[6]);
     delay(100);
     
 
